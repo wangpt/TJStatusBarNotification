@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "JDStatusBarNotification.h"
+
 @interface TJStatusBarClient : NSObject
 + (void)showStatusBarQueryStr:(NSString *)tipStr;
 + (void)showStatusBarSuccessStr:(NSString *)tipStr;
 + (void)showStatusBarErrorStr:(NSString *)errorStr;
-
++ (void)showStatusBarWarnStr:(NSString *)tipStr;
++ (void)statusBarDismiss;
++ (void)showStatusBarProgress:(CGFloat)progress;
++ (void)showStatusBarProgress:(CGFloat)progress styleName:(NSString*)styleName;
++ (void)hiddenStatusBarProgress;
 @end
