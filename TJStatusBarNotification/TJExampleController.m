@@ -54,6 +54,7 @@ static NSString * const TJStatusBarStyleProgress  = @"TJStatusBarStyleProgress";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"JDStatusBarNotification";
     self.view.backgroundColor = [UIColor whiteColor];
     self.examples = @[[TJExample exampleWithTitle:@"loading" selector:@"loadExample"],
                       [TJExample exampleWithTitle:@"success" selector:@"successExample"],
@@ -69,9 +70,9 @@ static NSString * const TJStatusBarStyleProgress  = @"TJStatusBarStyleProgress";
 #pragma mark - Examples
 - (void)loadExample{
     [TJStatusBarClient showStatusBarQueryStr:@"加载中..."];
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [TJStatusBarClient statusBarDismiss];
-//    });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [TJStatusBarClient statusBarDismiss];
+    });
 }
 
 -(void)successExample{
