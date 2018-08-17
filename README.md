@@ -1,0 +1,2 @@
+# TJStatusBarNotification
+based on JDStatusBarNotification.
