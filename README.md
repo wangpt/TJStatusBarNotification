@@ -3,14 +3,13 @@ based on JDStatusBarNotification.
 
 ![image](https://github.com/wangpt/TJStatusBarNotification/blob/master/TJStatusBarNotification/Sources/play.gif)
 
-## 请先安装CocoaPods
+# 请先安装CocoaPods
 安装成功以后使用命令安装JDStatusBarNotification
 ```
 pod install --verbose --no-repo-update
 ```
 
-## 使用说明
-###
+# 使用说明
 ```objc
 //loading
     [TJStatusBarClient showStatusBarQueryStr:@"加载中..."];
